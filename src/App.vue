@@ -1,21 +1,39 @@
 <template>
   <v-app>
-    <TreeTable />
+    <TreeTable :headers="headers" :items="items"/>
   </v-app>
 </template>
 
 <script>
-import TreeTable from './components/TreeTable';
+import TreeTable from './components/TreeTable'
+import json from './assets/original.json'
 
 export default {
   name: 'App',
 
   components: {
-    TreeTable
+    TreeTable,
   },
 
-  data: () => ({
-    //
-  }),
-};
+  data() {
+    return {
+      headers: [
+        {
+          text: 'ID',
+          value: 'id',
+          align: 'center',
+          sortable: false,
+        },
+        { text: 'Name', value: 'name', sortable: false },
+        {
+          text: 'SAP Object Type',
+          value: 'sapObjectType',
+          align: 'center',
+          sortable: false,
+        },
+      ],
+      items: json.divisions,
+    }
+  },
+}
 </script>
