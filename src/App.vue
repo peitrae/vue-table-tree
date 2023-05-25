@@ -1,20 +1,17 @@
 <template>
   <v-app>
-    <DataTable />
-    <TreeView />
+    <TreeTable />
   </v-app>
 </template>
 
 <script>
-import DataTable from './components/DataTable';
-import TreeView from './components/TreeView';
+import TreeTable from './components/TreeTable';
 
 export default {
   name: 'App',
 
   components: {
-    DataTable,
-    TreeView
+    TreeTable
   },
 
   data: () => ({

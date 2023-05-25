@@ -9,7 +9,7 @@
       <td>{{ item.sapObjectType }}</td>
     </tr>
     <template v-if="item.children && showChildren">
-      <RecursiveTableRow
+      <TreeTableRow
         v-for="child of item.children"
         :key="child.id"
         :item="child"
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "RecursiveTableRow",
+  name: "TreeTableRow",
   props: {
     item: Object,
     additionalPaddingLeft: {
