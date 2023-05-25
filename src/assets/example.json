@@ -1,0 +1,29 @@
+{
+	"divisions": [
+		{
+			"id": "1",
+			"name": "GEMS GROUP",
+			"sapObjectType": "O",
+      "isDisabled":null,
+      "children": [{
+        "id":"2",
+        "name":"Secretary",
+        "sapObjectType":"S",
+        "isDisabled":null
+     }]
+		},
+    {
+			"id": "3",
+			"name": "GEMS GROUP",
+			"sapObjectType": "O",
+      "isDisabled":null,
+      "children": [{
+        "id":"4",
+        "name":"Secretary",
+        "sapObjectType":"S",
+        "children":null,
+        "isDisabled":null
+     }]
+		}
+	]
+}
