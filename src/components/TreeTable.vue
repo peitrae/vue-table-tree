@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/valid-v-slot -->
 
 <template>
   <div>
@@ -33,9 +34,11 @@ export default {
         {
           text: "ID",
           value: "id",
+          align: "center",
+          sortable: false,
         },
-        { text: "Name", value: "name" },
-        { text: "SAP Object Type", value: "sapObjectType" },
+        { text: "Name", value: "name", sortable: false },
+        { text: "SAP Object Type", value: "sapObjectType", align: "center", sortable: false },
       ],
       data,
     };
