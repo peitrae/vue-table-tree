@@ -43,3 +43,5 @@ new Vue({
 }).$mount('#app')
 
 ```
+
+#### 3. Copy TreeTable and TreeTableRow to your component folder
