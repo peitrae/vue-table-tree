@@ -1,11 +1,8 @@
-<!-- eslint-disable vue/valid-v-slot -->
-
 <template>
   <div>
     <VDataTable
       :headers="headers"
       :items="items"
-      :items-per-page="5"
       class="elevation-1"
       item-key="id"
     >
