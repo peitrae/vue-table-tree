@@ -1,24 +1,45 @@
 # table-tree
 
-## Project setup
+## Integration Setup
+
+#### 1. Add Vuetify via Vue CLI
 ```
-npm install
+vue add vuetify
 ```
 
-### Compiles and hot-reloads for development
+#### 2. Add Fragment Plugin
+
+Install Fragment 
 ```
-npm run serve
+npm install vue-fragment
 ```
 
-### Compiles and minifies for production
+Create a plugin file for Fragment, src/plugins/fragment.js with the below content:
 ```
-npm run build
+// src/plugins/fragment.js
+
+import Fragment from 'vue-fragment';
+import Vue from 'vue';
+
+Vue.use(Fragment.Plugin);
+
+import { Plugin } from 'vue-fragment';
+Vue.use(Plugin);
 ```
 
-### Lints and fixes files
+Navigate to your main entry point where you instantiate your Vue instance and pass the Vuetify object in as an option.
 ```
-npm run lint
-```
+import Vue from 'vue'
+import App from './App.vue'
+import vuetify from './plugins/vuetify'
+import fragment from './plugins/fragment'
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue.config.productionTip = false
+
+new Vue({
+  vuetify,
+  fragment
+  render: h => h(App)
+}).$mount('#app')
+
+```
