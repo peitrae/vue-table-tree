@@ -9,17 +9,19 @@
               <v-icon v-else>mdi-chevron-down</v-icon>
             </v-btn>
           </div>
-          <span>{{ item.id }}</span>
+          <span>{{ item[headers[0].value] }}</span>
         </div>
       </td>
-      <td>
-        {{ item.name }}
+      <template v-for="(_, index) in headers" >
+        <td v-if="index > 0" :key="index" :style="headers[index].itemStyle">
+        {{ item[headers[index].value] }}
       </td>
-      <td class="text-center">{{ item.sapObjectType }}</td>
+      </template>
     </tr>
     <template v-if="item.children && showChildren">
       <TreeTableRow
         v-for="child of item.children"
+        :headers="headers"
         :key="child.id"
         :item="child"
         :additionalPaddingLeft="finalPaddingLeft"
@@ -32,6 +34,7 @@
 export default {
   name: 'TreeTableRow',
   props: {
+    headers: Array,
     item: Object,
     additionalPaddingLeft: {
       type: Number,

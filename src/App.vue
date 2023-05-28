@@ -30,6 +30,7 @@ export default {
           value: 'sapObjectType',
           align: 'center',
           sortable: false,
+          itemStyle: {'text-align': 'center'}
         },
       ],
       items: json.divisions,

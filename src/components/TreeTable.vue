@@ -4,10 +4,10 @@
       :headers="headers"
       :items="items"
       class="elevation-1"
-      item-key="id"
+      item-key="index"
     >
       <template #item="{ item }">
-        <TreeTableRow :item="item"/>
+        <TreeTableRow :item="item" :headers="headers"/>
       </template>
     </VDataTable>
   </div>
@@ -23,6 +23,7 @@ export default {
     TreeTableRow
   },
   props: {
+    itemKey: String,
     headers: Array,
     items: Array
   },
