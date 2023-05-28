@@ -18,20 +18,20 @@ export default {
   data() {
     return {
       headers: [
-        {
-          text: 'ID',
-          value: 'id',
-          align: 'center',
-          sortable: false,
-        },
-        { text: 'Name', value: 'name', sortable: false },
-        {
-          text: 'SAP Object Type',
-          value: 'sapObjectType',
-          align: 'center',
-          sortable: false,
-          itemStyle: {'text-align': 'center'}
-        },
+        // {
+        //   text: 'ID',
+        //   value: 'id',
+        //   align: 'center',
+        //   sortable: false,
+        // },
+        { text: 'Name', value: 'name', sortable: false, align: 'center' },
+        // {
+        //   text: 'SAP Object Type',
+        //   value: 'sapObjectType',
+        //   align: 'center',
+        //   sortable: false,
+        //   itemStyle: {'text-align': 'center'}
+        // },
       ],
       items: json.divisions,
     }
